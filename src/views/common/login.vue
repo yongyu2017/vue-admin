@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    import { userLogin } from '@/api/user'
+    import { userLogin, needCaptcha } from '@/api/user'
     import { mapMutations } from 'vuex'
 
     export default {
@@ -34,7 +34,7 @@
             }
         },
         mounted () {
-
+            needCaptcha()
         },
         methods: {
             ...mapMutations({

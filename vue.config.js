@@ -13,5 +13,14 @@ module.exports = {
             errors: true,
             warnings: true
         },
+        proxy: {
+            '/prod-api': {
+                target: `https://www.baidu.com`,
+                changeOrigin: true,
+                // pathRewrite: {
+                //   '^/prod-api': '',
+                // }
+            }
+        },
     }
 }

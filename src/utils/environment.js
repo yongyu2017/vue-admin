@@ -2,13 +2,13 @@ var baseURLStr = ''
 
 switch (process.env.NODE_ENV) {
     case 'production':
-        baseURLStr = 'http://www.baidu.com/boss-api-b';
+        baseURLStr = '';
         break
     case 'test':
-        baseURLStr = 'http://test.baidu.com/boss-api-b';
+        baseURLStr = '';
         break
     default:
-        baseURLStr = 'http://192.168.0.144:12139/boss-api-b';
+        baseURLStr = 'https://meeting.jvt.cc:6001/prod-api';
 }
 
 export const baseUrl = baseURLStr

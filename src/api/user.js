@@ -26,3 +26,11 @@ export function userUserList(data) {
         data: data
     })
 }
+
+// 获取验证码
+export function needCaptcha() {
+    return request({
+        url: '/prod-api/needCaptcha',
+        method: 'get'
+    })
+}

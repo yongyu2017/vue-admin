@@ -1,5 +1,7 @@
 <template>
-    <div>attendance</div>
+    <div>
+        attendance
+    </div>
 </template>
 
 <script>
@@ -9,7 +11,7 @@
                 dataForm: {
                 },
                 dataRule: {
-                }
+                },
             }
         },
         mounted () {
