@@ -8,8 +8,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import mainRoutes from './mainRoutes.js'
 import { userMenuList } from '@/api/user'
-import { isURL } from '@/utils/utils'
+import { isURL, clearLoginInfo } from '@/utils/utils'
 import { Loading, Message } from 'element-ui'
+import store from '@/store'
 
 Vue.use(Router)
 
@@ -31,6 +32,19 @@ const router = new Router({
 var loading= null;
 
 router.beforeEach((to, from, next) => {
+    var token= store.getters.token;
+
+    if(!token && (fnCurrentRouteType(to, globalRoutes) != 'global')){
+        clearLoginInfo()
+        next({
+            name: 'login',
+            query: {
+                url: encodeURIComponent(to.fullPath),
+            },
+            replace: true
+        })
+        return
+    }
     if(router.options.isAddDynamicMenuRoutes || fnCurrentRouteType(to, globalRoutes) === 'global'){
         next()
     }else{

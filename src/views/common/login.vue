@@ -59,7 +59,7 @@
                             this.setUserInfo(res.data)
 
                             this.$router.replace({
-                                name: 'home'
+                                path: this.$route.query.url? decodeURIComponent(this.$route.query.url): '/home'
                             }).catch(()=> {
                             })
 

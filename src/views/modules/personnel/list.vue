@@ -49,6 +49,7 @@
                     label="操作">
                 <template slot-scope="scope">
                     <el-button type="text" size="small" @click="addFun(scope.row.id, scope.row.name, scope.row.sex, scope.row.age)">修改</el-button>
+                    <el-button type="text" size="small" @click="toAttendanceFun(scope.row.id, scope.row.name)">考勤</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -133,6 +134,17 @@
                     this.$refs.listAddOrUpdate.init(id, name, sex, age)
                 })
             },
+            //跳转到考勤列表
+            toAttendanceFun: function (id, name) {
+                console.log(this.$router)
+                this.$router.push({
+                    name: 'personnel-attendance',
+                    query: {
+                        id,
+                        name,
+                    }
+                })
+            }
         }
     }
 </script>
