@@ -32,6 +32,7 @@ http.interceptors.request.use(config => {
 http.interceptors.response.use(response => {
     var res= response.data;
     console.log('requestjs', response.config.url, res)
+    console.log('test')
 
     if(res.code!== 0){
         if(res.code== 401){
