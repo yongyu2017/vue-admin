@@ -1,10 +1,10 @@
 <template>
-    <el-form ref="dataForm" :rules="dataRule" :inline="true" :model="dataForm" label-width="80px" @keyup.enter.native="loginFun()" @submit.native.prevent>
+    <el-form ref="dataForm" :rules="dataRule" :inline="true" :model="dataForm" label-width="80px" hide-required-asterisk @keyup.enter.native="loginFun()" @submit.native.prevent>
         <el-form-item label="帐号" prop="name">
             <el-input v-model="dataForm.name"></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="password">
-            <el-input v-model="dataForm.password"></el-input>
+            <el-input type="password" v-model="dataForm.password"></el-input>
         </el-form-item>
         <el-form-item>
             <el-button type="primary" @click="loginFun">登录</el-button>

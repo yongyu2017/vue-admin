@@ -36,7 +36,7 @@
         </el-tabs>
         <el-card :body-style="siteContentViewHeight" v-else>
             <keep-alive>
-                <router-view/>
+                <router-view />
             </keep-alive>
         </el-card>
     </div>
