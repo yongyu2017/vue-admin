@@ -24,7 +24,9 @@ export default {
     },
     //菜单列表
     menuList: (config)=> {
-        if(config.body.token== ''){
+        var data= JSON.parse(config.body);
+
+        if(data.token== ''){
             return {
                 code: 401,
                 data: '',
@@ -92,7 +94,7 @@ export default {
     userList: (config)=> {
         var data= JSON.parse(config.body);
 
-        if(config.body.token== ''){
+        if(data.token== ''){
             return {
                 code: 401,
                 data: '',

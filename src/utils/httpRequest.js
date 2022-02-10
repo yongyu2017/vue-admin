@@ -58,7 +58,12 @@ http.interceptors.response.use(response => {
     if(res.code!== 0){
         if(res.code== 401){
             clearLoginInfo()
-            router.push({ name: 'login' })
+            router.push({
+                name: 'login',
+                query: {
+                    url: encodeURIComponent(router.app._route.fullPath),
+                },
+            })
         }
         Message.error(res.msg || '程序异常')
 

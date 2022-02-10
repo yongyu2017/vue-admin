@@ -93,7 +93,7 @@
             this.searchFun()
         },
         methods: {
-            //获取房源列表
+            //获取列表
             userUserListFun: function () {
                 this.dataListLoading = true;
 
@@ -136,7 +136,6 @@
             },
             //跳转到考勤列表
             toAttendanceFun: function (id, name) {
-                console.log(this.$router)
                 this.$router.push({
                     name: 'personnel-attendance',
                     query: {
