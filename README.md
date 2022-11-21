@@ -20,11 +20,11 @@ npm run build（生产）
 ```
 ## 备注
 
+#### 1 注意项目安装node-sass（v6.0.1）、sass-loader（10.2.1）依赖包时，node.js运行环境为v16.18.1；
+#### 2 node-sass安装失败时，可以使用taobao镜像；
 ```
-1.注意项目安装node-sass（v6.0.1）、sass-loader（10.2.1）依赖包时，node.js运行环境为v16.18.1
-2.node-sass安装失败时，可以使用taobao镜像。
-    2.1 采用taobao的镜像地址，进入cmd之后输入：
-    npm config set registry https://registry.npm.taobao.org 
-    2.2 查看是否安装成功：
-    npm config get registry 
+2.1 采用taobao的镜像地址，进入cmd之后输入：
+npm config set registry https://registry.npm.taobao.org 
+2.2 查看是否安装成功：
+npm config get registry 
 ```
